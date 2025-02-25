@@ -12,7 +12,7 @@ data = {
 
 # Open the image you want to upload
 files = {
-    'photo': open('/media/', 'rb')  # Provide the path to the image file
+    'photo': open(r'C:\Users\imang\OneDrive\Plocha\1013511.jpg', 'rb')  # Provide the path to the image file
 }
 
 # Make the POST request

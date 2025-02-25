@@ -8,7 +8,7 @@ from .serializers import TaskSerializer
 
 
 #vrátím data GET
-@api_view(['GET', 'POST'])
+@api_view(['GET',"POST"])
 def Vrat_seznam_ukolu(request):
     if request.method == 'POST':
         serializer = TaskSerializer(data=request.data)
