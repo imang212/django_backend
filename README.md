@@ -27,5 +27,5 @@ Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite d
 
 ### 2. úkol (POST)
 Když pošlu úkol a uložím ho do sqlite databáze.
-Vyzkoušel jsem ho pomocí samostaatného python scriptu "app/make_post.py".
+Vyzkoušel jsem ho pomocí spuštění python scriptu "make_post.py" ve složce projektu.
 Následně jsem uložil do databáze úkol i s jeho obrázkém vybraným z měho PC, kde se v django složce uložil obrázek: "http://localhost:8000/media/tasks_photos/1013511" a můžu si ho na webu normálně otevřít. Zároveň i úkol mohu vidět na "http://localhost:8000/tasks/", kde mi ho to vrátí pomocí GET metody.
