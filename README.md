@@ -1,9 +1,10 @@
 ## Django aplikace
 
 Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáze.
+Nejdřív si vytvořím docker image, kde si spustím django server.
 
 ### 1. úkol (GET)
-Vrací na stránkách: "localhost:8000/tasks/" všechny úkoly z sqlite db.
+Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite db.
 
 ### 2. úkol (POST)
 Když pošlu úkol a uložím ho do sqlite databáze.
