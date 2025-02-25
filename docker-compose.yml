@@ -1,16 +1,14 @@
-version: "3.8"
-
+version: '3.8'
 services:
-  fastapi:
+  web:
     build: .
+    container_name: django_app
+    restart: always
+    working_dir: /app/todo_project
+    environment:
+      PYTHONPATH: "/app/todo_project"
+    volumes:
+      - .:/app
     ports:
       - "8000:8000"
-    depends_on:
-      - db
-
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+    command: gunicorn --bind 0.0.0.0:8000 todo_project.wsgi:application
