@@ -1,6 +1,6 @@
 ## Django aplikace
 
-Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáze.
+Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáze v rámci úkolu.
 
 ### Postup
 
