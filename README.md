@@ -6,17 +6,17 @@ Nejdřív si vytvořím django project například s názvem: todo_project, pak 
 
 Přešel jsem do vytvořené "tasks" složky Natavil model tabulky v databázi v models.py.
 
-Udělám migracce, aby se mi vytvořila daná tabulka.
+Udělám migraci, aby se mi vytvořila daná tabulka.
 
 Udělal serializaci modelu pro nastavení vracení dat v serializers.py.
 
 Přidal jsem GET metodu pro vrácení seznamu úkolů z databáze a další metody do views.py závislých na serializers.py a models.py.
 
-Přidal jsem do urls.py cesty k daným metodám.
+Přidal jsem do urls.py cesty k daným metodám v tasks složce a zároveň i v todo_project složce do urls.py cestu do app a k django adminovi.
 
 Udělal jsem si docker-compose a Dockerfile danému k projektu a spustil jsem ho v dockeru.
 
-Tam jsem také musel umožnit migrace a vytvořit super uživatele.
+Tam jsem také musel umožnit migrace a vytvořil super uživatele.
 
 
 
