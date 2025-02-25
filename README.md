@@ -1,7 +1,24 @@
 ## Django aplikace
 
 Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáze.
-Nejdřív si vytvořím docker image, kde si spustím django server.
+
+Nejdřív si vytvořím django project například s názvem: todo_project, pak v todo_project složce startapp s názvem tasks.
+
+Přešel jsem do vytvořené "tasks" složky Natavil model tabulky v databázi v models.py.
+
+Udělám migracce, aby se mi vytvořila daná tabulka.
+
+Udělal serializaci modelu pro nastavení vracení dat v serializers.py.
+
+Přidal jsem GET metodu pro vrácení seznamu úkolů z databáze a další metody do views.py závislých na serializers.py a models.py.
+
+Přidal jsem do urls.py cesty k daným metodám.
+
+Udělal jsem si docker-compose a Dockerfile danému k projektu a spustil jsem ho v dockeru.
+
+Tam jsem také musel umožnit migrace a vytvořit super uživatele.
+
+
 
 ### 1. úkol (GET)
 Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite db.
