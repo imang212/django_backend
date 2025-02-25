@@ -2,6 +2,8 @@
 
 Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáze.
 
+### Postup
+
 Nejdřív si vytvořím django project například s názvem: todo_project, pak v todo_project složce startapp s názvem tasks.
 
 Přešel jsem do vytvořené "tasks" složky Natavil model tabulky v databázi v models.py.
