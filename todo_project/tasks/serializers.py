@@ -11,6 +11,7 @@ class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = "__all__"
+
         def Over_nazev(self, value):
             if len(value) > 200:
                 raise ValidationError("Title must be 200 characters or fewer.")
@@ -36,3 +37,4 @@ class TaskSerializer(serializers.ModelSerializer):
                 data['photo'] = ContentFile(byte_io.read(), name=photo.name)
 
             return data
+

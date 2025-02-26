@@ -11,4 +11,4 @@ services:
       - .:/app
     ports:
       - "8000:8000"
-    command: gunicorn --bind 0.0.0.0:8000 todo_project.wsgi:application
+    command: gunicorn -w 3 --timeout 120 -k sync todo_project.wsgi:application -b 0.0.0.0:8000

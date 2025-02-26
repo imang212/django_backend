@@ -7,7 +7,7 @@ url = "http://localhost:8000/tasks/"
 data = {
     'title': 'New Task',
     'description': 'This is a description of the new task.',
-    'due_date': '2025-12-31',
+    'due_date': '2025-03-20',
 }
 
 # Open the image you want to upload
