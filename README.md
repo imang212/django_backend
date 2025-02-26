@@ -52,3 +52,5 @@ POST operace, kam zadám pole hodnot a počet k rotací. Vrátí mi(spočítá) 
 
 ### 9. úkol (POST longest increasing path)
 POST operace, kam zadám 2D pole (matici) celých čísel a spočítá mi délku nejdelší rostoucí cesty pomocí dfs algoritmu
+
+Všechny tyto 3 leetcode úlohy testuji pomocí skriptu "tst_rotate_array.py"
