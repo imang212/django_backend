@@ -40,7 +40,7 @@ Aktualizuji úkol pomocí PUT operace, kterou vyzkouším pomocí scriptu "test_
 Smažu úkol pomocí DELETE operace podle zadaného id úkolu, ta je také dohromady v jedné funkci s GET a PUT operací. Vyzkouším jí pomocí spuštění skriptu "test_delete.py"
 
 ### 6. úkol (GET nearest deadline)
-GET operace, která mi vrátí z databáze úkol s nejblišším deadline datumem od dnešního dne.
+GET operace, která mi vrátí z databáze úkol s nejblišším deadline datumem od dnešního dne. Můžu si ji načíst pomocí "http://localhost:8000/tasks/nearest-deadline/".
 
 ### LeetCode úlohy
 
