@@ -29,3 +29,21 @@ Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite d
 Když pošlu úkol a uložím ho do sqlite databáze.
 Vyzkoušel jsem ho pomocí spuštění python scriptu "make_post.py" ve složce projektu.
 Následně jsem uložil do databáze úkol i s jeho obrázkém vybraným z měho PC, kde se v django složce uložil obrázek: "http://localhost:8000/media/tasks_photos/1013511" a můžu si ho na webu normálně otevřít. Zároveň i úkol mohu vidět na "http://localhost:8000/tasks/", kde mi ho to vrátí pomocí GET metody.
+
+### 3. úkol (GET podle id)
+Vrátí mi na stránce úkol podle daného id např.:úkol s id 1"http://localhost:8000/tasks/1/" mi vrátí úkol s id 1. Pokud dané id neexistuje zase mi to vrátí chybu 404 stránka neexistuje.
+
+### 4. úkol (PUT podle id)
+Aktualizuji úkol pomocí PUT operace, kterou vyzkouším pomocí scriptu "test_update.py". Můžu například změnit jenom jednu informaci nebo i víc informací úkolu
+
+### 5. úkol (DELETE podle id)
+
+### 6. úkol (GET nearest deadline)
+
+### LeetCode úlohy
+
+### 7. úkol (POST rotate array)
+
+### 8. úkol (POST kth largest)
+
+### 9. úkol (POST longest increasing path)
