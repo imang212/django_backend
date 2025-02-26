@@ -5,7 +5,7 @@ url = "http://localhost:8000/tasks/"
 
 # Define the task data
 data = {
-    'title': 'New Task',
+    'title': 'Nejaka uloha',
     'description': 'This is a description of the new task.',
     'due_date': '2025-03-20',
 }

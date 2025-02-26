@@ -1,6 +1,6 @@
 import requests
 
-url = "http://127.0.0.1:8000/tasks/5/"  # Změň ID na existující úkol
+url = "http://127.0.0.1:8000/tasks/6/"  # Změň ID na existující úkol
 
 data = {
     "title": "Updated Task Title",
