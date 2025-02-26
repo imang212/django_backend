@@ -37,13 +37,18 @@ Vrátí mi na stránce úkol podle daného id např.:úkol s id 1"http://localho
 Aktualizuji úkol pomocí PUT operace, kterou vyzkouším pomocí scriptu "test_update.py". Můžu například změnit jenom jednu informaci nebo i víc informací úkolu
 
 ### 5. úkol (DELETE podle id)
+Smažu úkol pomocí DELETE operace podle zadaného id úkolu, ta je také dohromady v jedné funkci s GET a PUT operací. Vyzkouším jí pomocí spuštění skriptu "test_delete.py"
 
 ### 6. úkol (GET nearest deadline)
+GET operace, která mi vrátí z databáze úkol s nejblišším deadline datumem od dnešního dne.
 
 ### LeetCode úlohy
 
 ### 7. úkol (POST rotate array)
+POST operace, kam zadám pole hodnot a počet rotací k. Vrátí mi(spočítá) rotované pole a vrátí v JSON
 
 ### 8. úkol (POST kth largest)
+POST operace, kam zadám pole hodnot a počet k rotací. Vrátí mi(spočítá) JSON s ktým největším prvkem.
 
 ### 9. úkol (POST longest increasing path)
+POST operace, kam zadám 2D pole (matici) celých čísel a spočítá mi délku nejdelší rostoucí cesty pomocí heap algoritmu
