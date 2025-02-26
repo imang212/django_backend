@@ -45,10 +45,10 @@ GET operace, která mi vrátí z databáze úkol s nejblišším deadline datume
 ### LeetCode úlohy
 
 ### 7. úkol (POST rotate array)
-POST operace, kam zadám pole hodnot a počet rotací k. Vrátí mi(spočítá) rotované pole a vrátí v JSON
+POST operace, kam zadám pole hodnot a počet rotací k. Vrátí mi(spočítá) rotované pole a vrátí v JSON.
 
 ### 8. úkol (POST kth largest)
-POST operace, kam zadám pole hodnot a počet k rotací. Vrátí mi(spočítá) JSON s ktým největším prvkem.
+POST operace, kam zadám pole hodnot a počet k rotací. Vrátí mi(spočítá) JSON s ktým největší prvkem pomocí heap algoritmu.
 
 ### 9. úkol (POST longest increasing path)
-POST operace, kam zadám 2D pole (matici) celých čísel a spočítá mi délku nejdelší rostoucí cesty pomocí heap algoritmu
+POST operace, kam zadám 2D pole (matici) celých čísel a spočítá mi délku nejdelší rostoucí cesty pomocí dfs algoritmu
