@@ -16,7 +16,7 @@ Přidal jsem GET metodu pro vrácení seznamu úkolů z databáze a další meto
 
 Přidal jsem do urls.py cesty k daným metodám v tasks složce a zároveň i v todo_project složce do urls.py cestu do app a k django adminovi.
 
-Udělal jsem si docker-compose a Dockerfile danému k projektu, kde mi funguje přes gunicorn a spustil jsem ho v dockeru.
+Udělal jsem si docker-compose, Dockerfile danému k projektu a vyplnil jsem requirements.txt potřebnými knihovnami, kde mi funguje přes gunicorn a spustil jsem ho v dockeru.
 
 Tam jsem také musel umožnit migrace a vytvořil super uživatele.
 
