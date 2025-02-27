@@ -5,7 +5,7 @@ Backend webová aplikace vytvořená pomocí django frameworku a sqlite databáz
 ### Postup
 
 Nejdřív si vytvořím django project například s názvem: todo_project, pak v todo_project složce startapp s názvem tasks.
-```
+```shell
 django-admin startproject todo_project
 cd todo_project
 django-admin startapp tasks
