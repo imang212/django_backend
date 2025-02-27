@@ -42,19 +42,73 @@ python manage.py migrate
 ```
 
 Udělal serializaci modelu pro nastavení vracení dat v serializers.py.
+```python
 from rest_framework import serializers
 from .models import Task
-```python
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = "__all__"
 ```
 Přidal jsem GET metodu pro vrácení seznamu úkolů z databáze a další metody do views.py závislých na serializers.py a models.py.
+```python
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Task
+from .serializers import TaskSerializer
 
+@api_view(["GET"])
+def task_list(request):
+    tasks = Task.objects.all()
+    serializer = TaskSerializer(tasks, many=True)
+    return Response(serializer.data)
+```
 Přidal jsem do urls.py cesty k daným metodám v tasks složce a zároveň i v todo_project složce do urls.py cestu do app a k django adminovi.
+```python
+from django.urls import path
+from .views import task_list
 
-Udělal jsem si docker-compose, Dockerfile danému k projektu a vyplnil jsem requirements.txt potřebnými knihovnami, kde mi funguje přes gunicorn a spustil jsem ho v dockeru.
+urlpatterns = [
+    path("tasks/", task_list, name="task-list"),
+]
+```
+V todo_project složce.:
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("api/", include("tasks.urls")),
+]
+```
+Udělal jsem si docker-compose, Dockerfile danému k projektu a vyplnil jsem requirements.txt potřebnými knihovnami, kde mi funguje přes gunicorn a spustil jsem ho v dockeru. Běží to v python 3.11.
+
+requirements.txt
+```
+gunicorn==23.0.0
+django==5.1.6
+djangorestframework==3.15.2
+pillow==11.1.0
+psycopg2-binary==2.9.10
+dj-database-url==2.3.0
+numpy==2.2.3
+pillow==11.1.0
+opencv-python==4.11.0.86
+requests==2.32.3
+```
+Psaní v příkazové řádce v dané složce.
+```shell
+docker ps
+docker-compose build
+docker-compose up -d
+docker exec -it django_app bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+exit
+```
 
 Tam jsem také musel umožnit migrace a vytvořil super uživatele.
 
@@ -79,7 +133,6 @@ Smažu úkol pomocí DELETE operace podle zadaného id úkolu, ta je také dohro
 
 ### 6. úkol (GET nearest deadline)
 GET operace, která mi vrátí z databáze úkol s nejblišším deadline datumem od dnešního dne. Můžu si ji načíst pomocí "http://localhost:8000/tasks/nearest-deadline/".
-
 ### LeetCode úlohy
 
 ### 7. úkol (POST rotate array)
