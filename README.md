@@ -10,12 +10,46 @@ django-admin startproject todo_project
 cd todo_project
 django-admin startapp tasks
 ```
+Přidal jsem "tasks" a "rest_framework" do souboru settings.py
+```python
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "rest_framework",
+    "tasks",
+]
+```
 Přešel jsem do vytvořené "tasks" složky Natavil model tabulky v databázi v models.py.
+```python
+from django.db import models
+class Task(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField(max_length=500, blank=True, null=True)
+    due_date = models.DateField(blank=True, null=True)
+    photo = models.ImageField(upload_to="tasks_photos/", blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+```
 Udělám migraci, aby se mi vytvořila daná tabulka.
+```shell
+python manage.py makemigrations tasks
+python manage.py migrate
+```
 
 Udělal serializaci modelu pro nastavení vracení dat v serializers.py.
-
+from rest_framework import serializers
+from .models import Task
+```python
+class TaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = "__all__"
+```
 Přidal jsem GET metodu pro vrácení seznamu úkolů z databáze a další metody do views.py závislých na serializers.py a models.py.
 
 Přidal jsem do urls.py cesty k daným metodám v tasks složce a zároveň i v todo_project složce do urls.py cestu do app a k django adminovi.
