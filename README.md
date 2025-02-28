@@ -115,7 +115,7 @@ Tam jsem také musel umožnit migrace a vytvořil super uživatele.
 
 
 ### 1. úkol (GET)
-Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite db.
+Vrací na stránkách: "http://localhost:8000/tasks/" všechny úkoly z sqlite db. Výpis úkolů si je i možno zobrazit v html, přidal jsem tasks_list: "http://localhost:8000/tasks_list"
 
 ### 2. úkol (POST)
 Když pošlu úkol a uložím ho do sqlite databáze.
