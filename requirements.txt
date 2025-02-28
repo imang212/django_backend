@@ -1,5 +1,4 @@
 gunicorn==23.0.0
-asyncpg==0.30.0
 django==5.1.6
 djangorestframework==3.15.2
 pillow==11.1.0

@@ -19,11 +19,6 @@ def Vrat_seznam_ukolu(request):
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
-#from django.http import HttpResponse
-#from django.template import loader
-#def members(request):
-#  template = loader.get_template('main.html')
-#  return HttpResponse(template.render())
 from rest_framework import status
 
 @api_view(['POST'])
@@ -179,3 +174,16 @@ def longest_increasing_path(request):
         return Response({"result": max_path})
 
     except Exception as e: return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+#view
+from django.shortcuts import render
+
+def tasks_list(request):
+    tasks = Task.objects.all()
+    return render(request, "main.html", {"tasks": tasks})
+
+#from django.http import HttpResponse
+#from django.template import loader
+#def members(request):
+#  template = loader.get_template('main.html')
+#  return HttpResponse(template.render())
