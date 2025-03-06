@@ -85,6 +85,8 @@ urlpatterns = [
 ```
 Udělal jsem si docker-compose, Dockerfile danému k projektu a vyplnil jsem requirements.txt potřebnými knihovnami, kde mi funguje přes gunicorn a spustil jsem ho v dockeru. Běží to v python 3.11.
 
+Inspirace ze stránky: https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
+
 requirements.txt
 ```
 gunicorn==23.0.0
